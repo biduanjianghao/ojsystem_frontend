@@ -1,0 +1,1 @@
+openapi --input http://localhost:7396/v2/api-docs --output ./generated --client axios
