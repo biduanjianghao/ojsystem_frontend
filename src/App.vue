@@ -28,7 +28,6 @@ const doInit = () => {
 };
 
 onMounted(() => {
-  // 留下一个接口
   doInit();
 });
 </script>
