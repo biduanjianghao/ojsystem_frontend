@@ -14,6 +14,7 @@ export default {
     async getLoginUser({ commit, state }, payload) {
       // 远程登录
       const res = await UserControllerService.getLoginUserUsingGet();
+      console.log(res);
       if (res.code === 0) {
         commit("updateUser", payload);
       } else {

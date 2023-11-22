@@ -34,11 +34,11 @@ const form = reactive({
 } as UserLoginRequest);
 const handleSubmit = async () => {
   const res = await UserControllerService.userLoginUsingPost(form);
+  console.log(res);
   const userName = res.data.userName;
   const userRole = res.data.userRole;
   // 登录成功跳转到之前需要权限的页面
   const redirect = (router.currentRoute.value.query.redirect as string) ?? "/";
-  console.log(redirect);
   if (res.code === 0) {
     // 登录成功跳转到主页
     await store.dispatch("user/getLoginUser", {
